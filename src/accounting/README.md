@@ -61,6 +61,7 @@ Creates a new accounting system instance with optional initial balance (defaults
 ### Methods
 
 #### `getBalance()`
+
 Returns the current account balance.
 
 ```javascript
@@ -69,6 +70,7 @@ const balance = system.getBalance();
 ```
 
 #### `credit(amount)`
+
 Adds an amount to the account. Returns success/failure result object.
 
 ```javascript
@@ -77,6 +79,7 @@ const result = system.credit(500);
 ```
 
 #### `debit(amount)`
+
 Subtracts an amount from the account with overdraft protection.
 
 ```javascript
@@ -85,12 +88,14 @@ const result = system.debit(200);
 ```
 
 Fails if amount exceeds balance:
+
 ```javascript
 const result = system.debit(2000);
 // Returns: { success: false, error: 'Insufficient funds for this debit', balance: 1000 }
 ```
 
 #### `getTransactionHistory()`
+
 Returns an array of all transactions with details.
 
 ```javascript
@@ -99,6 +104,7 @@ const history = system.getTransactionHistory();
 ```
 
 #### `reset(initialBalance = 1000.00)`
+
 Resets the system to a clean state with specified initial balance.
 
 ```javascript
@@ -107,6 +113,7 @@ system.reset(2000);
 ```
 
 #### Static: `validateMenuChoice(choice)`
+
 Validates menu input (1-4 are valid choices).
 
 ```javascript
@@ -241,6 +248,7 @@ This Node.js implementation passes all test scenarios defined in [docs/TESTPLAN.
 Compared to the legacy COBOL system:
 
 ✨ **Enhanced Features**:
+
 - Transaction history with timestamps
 - Improved error handling and validation
 - Better decimal precision handling
@@ -248,11 +256,13 @@ Compared to the legacy COBOL system:
 - Comprehensive test coverage
 
 🔒 **Better Reliability**:
+
 - Fixed floating point precision issues
 - Input validation on all operations
 - Transaction logging for audit trails
 
 🚀 **Ready for Expansion**:
+
 - Easy to add persistence layer (database)
 - Can be wrapped in REST API
 - Supports multiple concurrent accounts

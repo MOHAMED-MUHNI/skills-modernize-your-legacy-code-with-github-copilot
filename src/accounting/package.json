@@ -1,0 +1,22 @@
+{
+  "name": "school-accounting-system",
+  "version": "1.0.0",
+  "description": "Modernized Node.js version of the school's legacy COBOL accounting system",
+  "main": "accountingSystem.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "accounting",
+    "banking",
+    "node.js",
+    "modernization"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
